@@ -4,26 +4,26 @@ pragma AbiHeader time;
 
 contract Contest {
 
-    event NewContest(string name, string fee, uint reward);
-    
+    event NewContest(string name, uint fee, uint reward);
+
     struct Contest {
         string name;
-        uint8 fee;
-        uint8 reward;
-        uint8 status;
+        uint fee;
+        uint reward;
+        uint status;
     }
 
     Contest[] public _contests;
 
     function _createContest (string _name, uint _fee, uint _reward) private {
-        _contests.push(Chimera(_name, _fee, _reward, 0));
+        _contests.push(Contest(_name, _fee, _reward, 0));
         uint id = _contests.length - 1;
         emit NewContest(_name, _fee, _reward);
     }
 
     function createDefaultContest (string _name) public returns (uint) {
-        uint8 _fee = 10;
-        uint8 _reward = 1000;
+        uint _fee = 10;
+        uint _reward = 1000;
         tvm.accept();
         _createContest(_name, _fee, _reward);
     }

@@ -1,0 +1,55 @@
+{
+	"ABI version": 2,
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "createDefaultContest",
+			"inputs": [
+				{"name":"_name","type":"bytes"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "createContest",
+			"inputs": [
+				{"name":"_name","type":"bytes"},
+				{"name":"_fee","type":"uint256"},
+				{"name":"_reward","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "_contests",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"name","type":"bytes"},{"name":"fee","type":"uint256"},{"name":"reward","type":"uint256"},{"name":"status","type":"uint256"}],"name":"_contests","type":"tuple[]"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+		{
+			"name": "NewContest",
+			"inputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"fee","type":"uint256"},
+				{"name":"reward","type":"uint256"}
+			],
+			"outputs": [
+			]
+		}
+	]
+}
