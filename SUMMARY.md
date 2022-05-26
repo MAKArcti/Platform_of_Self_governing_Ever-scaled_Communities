@@ -7,5 +7,5 @@
   * [.build](readme-1/.build.md)
   * [crs](readme-1/crs/README.md)
     * [Page 1](readme-1/crs/page-1.md)
-    * [Page 2](readme-1/crs/page-2.md)
+    * [.foundation](readme-1/crs/.foundation.md)
     * [Agent mining](readme-1/crs/agent-mining.md)
